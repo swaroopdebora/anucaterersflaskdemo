@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+ <header class="masthead" style="background-image: url('https://images7.alphacoders.com/336/336506.jpg')">
+   <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1> Nothing brings people together like Good Food</h1>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+   <form method="POST" target="_blank">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username">
+            <button>Go to chat!</button>
+        </form>
+       <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <hr>
+        <div class="post-preview">
+          <a href="post.html">
+            <h2 class="post-title">
+              “One cannot think well, love well, sleep well, if one has not dined well.”
+            </h2>
+          </a>
+          <p class="post-meta">Posted by
+            <a href="#">Virginia Woolf</a></p>
+        </div>
+        <hr>
+        <div class="post-preview">
+          <a href="post.html">
+            <h2 class="post-title">
+              Pull up a chair. Take a taste. Come join us. Life is so endlessly delicious.
+            </h2>
+            
+          </a>
+          <p class="post-meta">Posted by
+            <a href="#">Ruth Reichl</a></p>
+        </div>
+        <hr>
+        
+        <hr>
+        <!-- Pager -->
+      
+      </div>
+    </div>
+       
+{% endblock %}

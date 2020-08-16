@@ -1,0 +1,79 @@
+[
+
+    {
+        "name": "Indian Breakfast",
+        "description": "The dishes are light on the stomach, filling and give you enough proteins, carbs and fats to jump start your day in a great way. The recipes are a mix of rice & lentils and served with spicy, tangy sides like chutneys, sambar (a lentil based soup) and so on. Some dishes include: Idli, Dosa, Upma, Idiyappam",
+        "image_source": "static/img/breakfast.png"
+    },
+     {
+        "name": "Veg Thali",
+        "description": "Thali the meal refers to many different dishes (both vegetarian and non-vegetarian),served in small bowls called (Katori in Hindi) arranged on a Thali, or a platter. A flatbread, rice, pickle, salad, and dessert are also included, as is bread (like chapatis).",
+        "image_source": "static/img/lunch thali.jpg"
+    },
+       {
+        "name": "Chicken Biryani",
+        "description": "Our The method of cooking makes hyderabadi biryani unique and delicious. potli masala (mixture of different masalas) makes it so special and spicy and layering of basmati rice and nonveg pieces adds to the taste and covering the lid with dough helps in boiling evenly and it is a blend of Mughlai and Telugu cuisine.",
+        "image_source": "static/img/hyderabadi-chicken-biryani.jpg"
+    },
+     {
+        "name": "Natu Kodi Pulusu",
+        "description": "Natu kodi kura is a delicious and spicy Andhra chicken curry made with a Guntur chilli spice mix and a hint of coconut.Naatu kodi pulusu or country chicken curry tastes good when served with hot rice or Rotis.",
+        "image_source": "static/img/Chicken curry.jpg"
+    },
+      {
+        "name": "Fish Fry",
+        "description": "Flavorful shallow fried sea food recipe with fish made by adding basic dry spices and this fried fish can be used as a starter.",
+        "image_source": "static/img/fish-fry.jpg"
+    },
+        {
+        "name": "Spicy Fish Gravy",
+        "description": "Delicious, flavourful spicy, tangy, fish curry in an onion tomato base. The spicy flavours of this recipe will surely take your food experience up by a notch!",
+        "image_source": "static/img/Hyderabadi Fish Curry.JPG"
+    },
+     {
+        "name": "Mutton Curry",
+        "description": "Rogan josh, also written roghan josh or roghan ghosht, is an aromatic curried meat dish of Persian or Kashmiri origin. It is made with red meat, traditionally lamb or goat. It is coloured and flavoured primarily by alkanet flower or root and Kashmiri chilies. It is one of the signature recipes of Kashmiri cuisine. ",
+        "image_source": "static/img/muttonroganjosh.jpg"
+    },
+            {
+        "name": "Steamed Jeera Rice",
+        "description": "Delicious, flavourful spicy, tangy, fish curry in an onion tomato base. The spicy flavours of this recipe will surely take your food experience up by a notch!",
+        "image_source": "static/img/jeera-rice.jpg"
+    },
+     {
+        "name": "Ragi Ball - finger millet ball",
+        "description": "Ragi Mudde, Ragi Sangati or kali and colloquially simply referred to as either 'Mudde' or 'Hittu' - i.e. flour; is a wholesome meal in the state of Karnataka and the Rayalaseema region in Andhra Pradesh. It is mainly popular with the rural folk of Karnataka. ",
+        "image_source": "https://4.bp.blogspot.com/-hN6nqnbLfiQ/VSTdnAHD2rI/AAAAAAAALrk/jZAcONsFLBk/w1200-h630-p-k-no-nu/IMG_0784%2Bcopy.jpg"
+    },
+      {
+        "name": "Butter-Naan Indian Bread",
+        "description": "Naan is typically made by combining refined flour or maida with salt, and leavened with yeast. It is preferable to make in a tandoor, and can be made with number of variations, including butter, garlic etc. ",
+        "image_source": "static/img/butter-naan.jpg"
+    },
+            {
+        "name": "Chats",
+        "description": "Chaat is a term describing savoury snacks, typically served at road-side tracks from stalls or food carts in India and some parts of Pakistan. With its origins in Uttar Pradesh, chaat has become immensely popular in the rest of South Asia.",
+        "image_source": "static/img/Chats.jpg"
+    },
+     {
+        "name": "Potato Bajji",
+        "description": "Aloo Bhaji popular Indian tea time snack made with Potatoes , spices and gram flour. These are made across India and are also known as aloo bajji towards the South. ... It is sliced potatoes dunked in gram flour batter and deep fried in hot oil.",
+        "image_source": "static/img/potato-bajji.jpg"
+    },
+    
+            {
+        "name": "Mirchi Bajji",
+        "description": "Mirchi Bajji, spicy Indian snack consisting of chili and potato or cauliflower stuffing, served hot with tomato sauce or occasionally with mint and tamarind chutney.",
+        "image_source": "static/img/mirchi-bajji.jpg"
+    },
+     {
+        "name": "Irani Tea",
+        "description": "Irani chai is a unique form of tea unlike any other version of Indian chai, made by the addition of mawa or khoya to black tea. The result is a sweet and creamy chai—the addition of spices like cinnamon and green cardamom is optional.",
+        "image_source": "static/img/irani-tea.jpg"
+    },
+     {
+        "name": "Mithai",
+        "description": "Ranging from Gulab Jamuns to Payasam, nostalgic favourites to modern avatars, we bring to you the most loved Indian desserts.",
+        "image_source": "static/img/mixed-sweets.jpg"
+    }
+]
