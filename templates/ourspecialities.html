@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block content %}
+ <header class="masthead" style="background-image: url('static/img/our-specialties.jpg')">
+   <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+           
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <h2>{{ page_title }}</h2>
+    <p>Indian cuisine consists of a variety of regional and traditional cuisines native to the Indian subcontinent. 
+    Given the diversity in soil, climate, culture, ethnic groups, and occupations, 
+    these cuisines vary substantially and use locally available spices, herbs, vegetables, and fruits. 
+    Indian food is also heavily influenced by religion, in particular Hinduism, cultural choices and traditions. 
+    The cuisine is also influenced by centuries of Islamic rule, particularly the Mughal rule. 
+    Samosas and pilafs are examples.</p>
+
+    <h1>Recipies we Master</h1>
+
+    {% for dish in dishes %}
+   
+    <div class="row featurette">
+    {% if loop.index %2 != 0 %}
+        <div class="col-md-7">
+            <h3> {{ loop.index}} {{ dish.name }}</h3>
+            <p>{{ dish.description}}</p>
+        </div>
+        <div class="col-md-5"> 
+            <img class="featurette-image img-responsive "  src="{{ dish.image_source }}" style="width: 300px;height: 300px;"/>
+        </div>
+    {% else %} 
+            <div class="col-md-5"> 
+            <img class="featurette-image img-responsive "  src="{{ dish.image_source }}" style="width: 300px;height: 300px;"/>
+        </div>
+           <div class="col-md-7">
+            <h3> {{ loop.index}} {{ dish.name }}</h3>
+            <p>{{ dish.description}}</p>
+        </div>
+    {% endif %}
+
+    </div>
+    {% if loop.index != 15 %}
+
+    <hr class="featurette-divider">
+   {% endif %}
+
+    {% endfor %}
+{% endblock %}
