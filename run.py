@@ -1,13 +1,19 @@
 import os
 from datetime import datetime
 from flask import Flask, json, redirect, render_template, request, session, url_for, flash
+from flask_pymongo import PyMongo
+from bson.objectid import ObjectId 
 
 
 app = Flask(__name__)
 app.secret_key = "randomstring123"
 messages = []
-app = Flask(__name__)
-app.secret_key = 'some_secret'
+
+
+app.config["MONGO_DBNAME"] = 'task_manager'
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
+
+mongo = PyMongo(app)
 
 
 @app.route('/')
@@ -47,14 +53,17 @@ def user(username):
     return render_template("chat.html", username=username, chat_messages=messages)
 
 
-
-
 @app.route("/ourspecialities")
 def ourspecialities():
     data = []
     with open("data/dishes.json","r") as json_data:
         data = json.load(json_data)
     return render_template("ourspecialities.html", page_title="Our Specialities", dishes =data)
+
+
+@app.route('/get_tasks')
+def get_tasks():
+    return render_template("task_manager.html", tasks = mongo.db.tasks.find(),page_title = "Come work with us")
 
 
 @app.route("/contact", methods=["GET", "POST"])
