@@ -15,7 +15,6 @@ app.config["MONGO_URI"] = 'mongodb+srv://root:RootUser@myfirstcluster.zhfps.mong
 
 mongo = PyMongo(app)
 
-
 @app.route('/')
 def index():
     return render_template("index.html", page_title="Ananya Caterers")
