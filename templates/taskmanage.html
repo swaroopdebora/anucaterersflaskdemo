@@ -1,13 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-   <header class="masthead" style="background-image: url('static/img/cook+with+us.png')">
+   <header class="masthead" >
    <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
            <title>{{ page_title }}</title>
-            
+            {% for t in task %}
+                {{t.category_name}}
+                {{t.task_name}}
+            {% endfor %}
           </div>
         </div>
       </div>

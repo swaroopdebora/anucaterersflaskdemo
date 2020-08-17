@@ -11,7 +11,7 @@ messages = []
 
 
 app.config["MONGO_DBNAME"] = 'task_manager'
-app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
+app.config["MONGO_URI"] = 'mongodb+srv://root:RootUser@myfirstcluster.zhfps.mongodb.net/task_manager?retryWrites=true&w=majority'
 
 mongo = PyMongo(app)
 
@@ -63,7 +63,7 @@ def ourspecialities():
 
 @app.route("/taskmanage")
 def taskmanage():
-    return render_template("taskmanage.html",page_title = "Task Manager")
+    return render_template("taskmanage.html",task=mongo.db.task.find() ,page_title = "Task Manager")
 
 
 @app.route("/contact", methods=["GET", "POST"])
