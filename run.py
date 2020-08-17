@@ -61,9 +61,9 @@ def ourspecialities():
     return render_template("ourspecialities.html", page_title="Our Specialities", dishes =data)
 
 
-@app.route('/get_tasks')
-def get_tasks():
-    return render_template("task_manager.html", tasks = mongo.db.tasks.find(),page_title = "Come work with us")
+@app.route("/taskmanage")
+def taskmanage():
+    return render_template("taskmanage.html",page_title = "Task Manager")
 
 
 @app.route("/contact", methods=["GET", "POST"])
