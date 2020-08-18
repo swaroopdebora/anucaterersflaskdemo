@@ -40,6 +40,11 @@ def chat():
     return render_template("index.html")
 
 
+@app.route("/login")
+def login():
+    return render_template("login.html", page_title="Login to Ananya Caterers")
+
+
 @app.route("/chat/<username>", methods=["GET", "POST"])
 def user(username):
     """Add and display chat messages"""
@@ -48,7 +53,6 @@ def user(username):
         message = request.form["message"]
         add_message(username, message)
         return redirect(url_for("user", username=session["username"]))
-
     return render_template("chat.html", username=username, chat_messages=messages)
 
 
