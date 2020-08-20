@@ -71,12 +71,13 @@ def login():
         username = request.form['username']
         password = request.form['password']
         
-        user = [x for x in users if x.username == username][0]
+        user = [x for x in users if x.username == username]
         if user and user.password == password:
             session['user_id'] = user.id
-            return redirect(url_for('taskmanage'))
+            print("hi")
+            return redirect(url_for("taskmanage"))
   
-        return redirect(url_for('taskmanage'))
+        return redirect(url_for("login"))
 
     return render_template("login.html", page_title="Login to Ananya Caterers")
 
@@ -102,10 +103,7 @@ def ourspecialities():
 
 @app.route("/taskmanage")
 def taskmanage():
-    if not g.user:
-        return redirect(url_for('login'))
-
-    return render_template("taskmanage.html",task=mongo.db.task.find() ,page_title = "Task Manager")
+    return render_template("taskmanage.html", task=mongo.db.task.find() ,page_title = "Task Manager")
 
 
 @app.route("/contact", methods=["GET", "POST"])
