@@ -70,15 +70,11 @@ def login():
 
         username = request.form['username']
         password = request.form['password']
-        
         user = [x for x in users if x.username == username]
         if user and user.password == password:
             session['user_id'] = user.id
-            
             return redirect(url_for("taskmanage"))
-  
         return redirect(url_for("login"))
-
     return render_template("login.html", page_title="Login to Ananya Caterers")
 
 
@@ -109,6 +105,19 @@ def taskmanage():
 @app.route("/addtask")
 def addtask():
     return render_template("addtask.html", task=mongo.db.categories.find() ,page_title = "Add Task")
+
+
+@app.route('/get_tasks')
+def get_tasks():
+    return render_template("tasks.html", 
+                           tasks=mongo.db.tasks.find())
+
+
+@app.route('/insert_task', methods=['POST'])
+def insert_task():
+    tasks = mongo.db.tasks
+    tasks.insert_one(request.form.to_dict())
+    return redirect(url_for('get_tasks'))
 
 
 @app.route("/contact", methods=["GET", "POST"])
