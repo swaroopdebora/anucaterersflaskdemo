@@ -108,7 +108,7 @@ def taskmanage():
 
 @app.route("/addtask")
 def addtask():
-    return render_template("addtask.html", task=mongo.db.task.find() ,page_title = "Add Task")
+    return render_template("addtask.html", task=mongo.db.categories.find() ,page_title = "Add Task")
 
 
 @app.route("/contact", methods=["GET", "POST"])
