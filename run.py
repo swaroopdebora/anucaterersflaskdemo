@@ -74,7 +74,7 @@ def login():
         user = [x for x in users if x.username == username]
         if user and user.password == password:
             session['user_id'] = user.id
-            print("hi")
+            
             return redirect(url_for("taskmanage"))
   
         return redirect(url_for("login"))
@@ -126,5 +126,6 @@ def careers():
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
+            debug=True
             )
 
