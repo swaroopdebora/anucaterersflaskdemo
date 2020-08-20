@@ -110,12 +110,12 @@ def addtask():
 @app.route('/get_tasks')
 def get_tasks():
     return render_template("tasks.html", 
-                           tasks=mongo.db.tasks.find())
+                           tasks=mongo.db.task.find())
 
 
 @app.route('/insert_task', methods=['POST'])
 def insert_task():
-    tasks = mongo.db.tasks
+    tasks = mongo.db.task
     tasks.insert_one(request.form.to_dict())
     return redirect(url_for('get_tasks'))
 
