@@ -106,6 +106,10 @@ def taskmanage():
     return render_template("taskmanage.html", task=mongo.db.task.find() ,page_title = "Task Manager")
 
 
+@app.route("/addtask")
+def addtask():
+    return render_template("addtask.html", task=mongo.db.task.find() ,page_title = "Add Task")
+
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method =="POST":
