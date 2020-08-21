@@ -109,7 +109,7 @@ def addtask():
 
 @app.route('/get_tasks')
 def get_tasks():
-    return render_template("tasks.html", 
+    return render_template("task.html", 
                            tasks=mongo.db.task.find())
 
 
